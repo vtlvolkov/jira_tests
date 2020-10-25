@@ -40,3 +40,8 @@ class BaseElement(object):
     def text(self):
         text = self.web_element.text
         return text
+
+    @property
+    def page_title(self):
+        title = self.driver.title
+        return title

@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from pages.base_element import BaseElement
 from pages.base_page import BasePage
 from pages.locator import Locator
+from pages.home_page import HomePage
 
 
 class LoginPage(BasePage):
@@ -32,6 +33,7 @@ class LoginPage(BasePage):
         self.login_field.type_text('botulizmer')
         self.password_field.type_text('qwerty')
         self.login_button.click()
-        return None
+        return HomePage(driver=self.driver)
+
 
 
